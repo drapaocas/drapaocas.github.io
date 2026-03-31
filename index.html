@@ -3,77 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dra Paocas - Medicina y Cirugía Veterinaria</title>
+<title>Dra Paocas | Medicina y Cirugía Veterinaria</title>
 
 <style>
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background-color: #f5f7fa;
+    background-color: #f4f6f9;
+    color: #333;
 }
 
-/* HEADER */
-header {
-    background-color: #1f4e8c;
+/* HEADER HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('portada.jpeg');
+    background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 100px 20px;
 }
 
-header h1 {
+.hero h1 {
+    font-size: 40px;
     margin: 0;
-    font-size: 32px;
 }
 
-header p {
-    margin-top: 10px;
+.hero p {
     font-size: 18px;
+    margin: 15px 0;
 }
 
-/* BOTÓN */
 .boton {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
+    padding: 14px 28px;
     background-color: #25D366;
     color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
+    margin-top: 15px;
 }
 
-/* SECCIONES */
+/* CONTENIDO */
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 .card {
     background: white;
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-/* IMÁGENES */
-img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
 /* GRID */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 25px;
 }
 
+/* IMÁGENES PRO */
+.img-pro {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* SERVICIOS */
+.servicio {
+    text-align: center;
+}
+
+.servicio h3 {
+    margin-top: 10px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 50px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 28px;
     }
 }
 </style>
@@ -81,80 +111,95 @@ img {
 
 <body>
 
-<header>
+<!-- HERO -->
+<section class="hero">
     <h1>Dra Paocas</h1>
-    <p>Medicina y cirugía veterinaria de tejidos blandos</p>
+    <p>Medicina y cirugía veterinaria especializada a domicilio</p>
 
     <a class="boton" href="https://wa.me/573195287810?text=Hola%20Dra%20Paocas,%20quiero%20agendar%20una%20consulta">
         Agendar por WhatsApp
     </a>
-</header>
+</section>
 
 <div class="container">
 
+    <!-- SOBRE MI -->
     <div class="card">
-        <h2>Atención veterinaria a domicilio</h2>
-        <p>
-        Manejo clínico enfocado en la seguridad del paciente, protocolos anestésicos controlados
-        y recuperación supervisada hasta estado consciente.
-        </p>
+        <div class="grid">
+            <div>
+                <h2>Enfoque clínico</h2>
+                <p>
+                Atención veterinaria con protocolos anestésicos controlados,
+                procedimientos seguros y recuperación supervisada hasta estado consciente.
+                </p>
 
-        <img src="portada.jpeg">
+                <p>
+                Manejo orientado a minimizar riesgos y optimizar la estabilidad del paciente.
+                </p>
+
+                <a class="boton" href="https://wa.me/573195287810?text=Quiero%20información%20sobre%20consulta">
+                    Consultar ahora
+                </a>
+            </div>
+
+            <div>
+                <img src="Profesional.jpeg" class="img-pro">
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-        <h2>Sobre la doctora</h2>
-        <p>
-        Médica veterinaria zootecnista con experiencia en cirugía de tejidos blandos,
-        manejo clínico integral y atención personalizada a domicilio.
-        </p>
-
-        <img src="Profesional.jpeg">
-    </div>
-
+    <!-- SERVICIOS -->
     <div class="card">
         <h2>Servicios</h2>
 
         <div class="grid">
 
-            <div>
+            <div class="servicio">
+                <img src="consulta.jpeg" class="img-pro">
                 <h3>Consulta a domicilio</h3>
-                <img src="consulta.jpeg">
             </div>
 
-            <div>
+            <div class="servicio">
+                <img src="procedimiento.jpeg" class="img-pro">
                 <h3>Procedimientos clínicos</h3>
-                <img src="procedimiento.jpeg">
             </div>
 
-            <div>
+            <div class="servicio">
+                <img src="cirugia.jpeg" class="img-pro">
                 <h3>Cirugía de tejidos blandos</h3>
-                <img src="cirugia.jpeg">
             </div>
 
         </div>
     </div>
 
+    <!-- DIFERENCIALES -->
     <div class="card">
         <h2>Diferenciales clínicos</h2>
+
         <ul>
             <li>Protocolos anestésicos de corta duración</li>
             <li>Entrega del paciente despierto y estable</li>
             <li>Seguimiento postoperatorio</li>
+            <li>Atención personalizada a domicilio</li>
         </ul>
     </div>
 
+    <!-- CONTACTO -->
     <div class="card">
         <h2>Contacto</h2>
+
         <p><strong>Teléfono:</strong> 319 528 7810</p>
         <p><strong>Instagram:</strong> @drapaocas</p>
 
-        <a class="boton" href="https://wa.me/573195287810?text=Hola%20Dra%20Paocas,%20quiero%20agendar%20una%20consulta">
+        <a class="boton" href="https://wa.me/573195287810?text=Hola%20quiero%20agendar%20una%20consulta">
             Escribir por WhatsApp
         </a>
     </div>
 
 </div>
+
+<!-- BOTÓN FLOTANTE -->
+<a class="whatsapp-float" href="https://wa.me/573195287810?text=Hola%20Dra%20Paocas">💬</a>
 
 </body>
 </html>
