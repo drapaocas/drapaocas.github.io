@@ -13,16 +13,23 @@ body {
     color: #333;
 }
 
-/* HEADER HERO */
+/* HERO */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('portada.jpeg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('portada.jpeg');
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
 }
 
+.logo {
+    width: 320px; /* MÁS GRANDE */
+    max-width: 90%;
+    margin-bottom: 20px;
+}
+
+/* TEXTO HERO */
 .hero h1 {
     font-size: 40px;
     margin: 0;
@@ -30,9 +37,16 @@ body {
 
 .hero p {
     font-size: 18px;
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
+.ubicacion {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* BOTÓN */
 .boton {
     display: inline-block;
     padding: 14px 28px;
@@ -41,7 +55,7 @@ body {
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 /* CONTENIDO */
@@ -56,7 +70,7 @@ body {
     padding: 30px;
     margin-bottom: 25px;
     border-radius: 14px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 /* GRID */
@@ -66,7 +80,6 @@ body {
     gap: 25px;
 }
 
-/* IMÁGENES PRO */
 .img-pro {
     width: 100%;
     height: 300px;
@@ -74,13 +87,18 @@ body {
     border-radius: 12px;
 }
 
-/* SERVICIOS */
-.servicio {
-    text-align: center;
+/* REDES */
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
 }
 
-.servicio h3 {
-    margin-top: 10px;
+.redes a {
+    text-decoration: none;
+    color: #1f4e8c;
+    font-weight: bold;
 }
 
 /* WHATSAPP FLOAT */
@@ -113,8 +131,13 @@ body {
 
 <!-- HERO -->
 <section class="hero">
+
+    <img src="LOGO CLIENTES.png" class="logo">
+
     <h1>Dra Paocas</h1>
     <p>Medicina y cirugía veterinaria especializada a domicilio</p>
+
+    <p class="ubicacion">Atención en Soacha y sur de Bogotá</p>
 
     <a class="boton" href="https://wa.me/573195287810?text=Hola%20Dra%20Paocas,%20quiero%20agendar%20una%20consulta">
         Agendar por WhatsApp
@@ -123,23 +146,20 @@ body {
 
 <div class="container">
 
-    <!-- SOBRE MI -->
+    <!-- SOBRE -->
     <div class="card">
         <div class="grid">
             <div>
                 <h2>Enfoque clínico</h2>
                 <p>
-                Atención veterinaria con protocolos anestésicos controlados,
-                procedimientos seguros y recuperación supervisada hasta estado consciente.
+                Manejo médico enfocado en seguridad del paciente, anestesia controlada
+                y recuperación supervisada hasta estado consciente.
                 </p>
 
                 <p>
-                Manejo orientado a minimizar riesgos y optimizar la estabilidad del paciente.
+                Servicio veterinario a domicilio en Soacha y sur de Bogotá,
+                con atención personalizada y criterio quirúrgico.
                 </p>
-
-                <a class="boton" href="https://wa.me/573195287810?text=Quiero%20información%20sobre%20consulta">
-                    Consultar ahora
-                </a>
             </div>
 
             <div>
@@ -154,17 +174,17 @@ body {
 
         <div class="grid">
 
-            <div class="servicio">
+            <div>
                 <img src="consulta.jpeg" class="img-pro">
                 <h3>Consulta a domicilio</h3>
             </div>
 
-            <div class="servicio">
+            <div>
                 <img src="procedimiento.jpeg" class="img-pro">
                 <h3>Procedimientos clínicos</h3>
             </div>
 
-            <div class="servicio">
+            <div>
                 <img src="cirugia.jpeg" class="img-pro">
                 <h3>Cirugía de tejidos blandos</h3>
             </div>
@@ -175,12 +195,11 @@ body {
     <!-- DIFERENCIALES -->
     <div class="card">
         <h2>Diferenciales clínicos</h2>
-
         <ul>
             <li>Protocolos anestésicos de corta duración</li>
             <li>Entrega del paciente despierto y estable</li>
             <li>Seguimiento postoperatorio</li>
-            <li>Atención personalizada a domicilio</li>
+            <li>Atención directa a domicilio</li>
         </ul>
     </div>
 
@@ -189,7 +208,13 @@ body {
         <h2>Contacto</h2>
 
         <p><strong>Teléfono:</strong> 319 528 7810</p>
-        <p><strong>Instagram:</strong> @drapaocas</p>
+
+        <div class="redes">
+            <a href="https://www.instagram.com/drapaocas" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/Drapaocas" target="_blank">Facebook</a>
+            <a href="https://www.tiktok.com/@drapaocas" target="_blank">TikTok</a>
+            <a href="https://www.youtube.com/@DraPaocas" target="_blank">YouTube</a>
+        </div>
 
         <a class="boton" href="https://wa.me/573195287810?text=Hola%20quiero%20agendar%20una%20consulta">
             Escribir por WhatsApp
@@ -199,7 +224,7 @@ body {
 </div>
 
 <!-- BOTÓN FLOTANTE -->
-<a class="whatsapp-float" href="https://wa.me/573195287810?text=Hola%20Dra%20Paocas">💬</a>
+<a class="whatsapp-float" href="https://wa.me/573195287810">💬</a>
 
 </body>
 </html>
