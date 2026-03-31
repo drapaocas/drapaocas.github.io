@@ -4,98 +4,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dra Paocas | Medicina y cirugía veterinaria</title>
+<title>Dra Paocas | Medicina y Cirugía Veterinaria</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-h1, h2 {
-  margin-bottom: 10px;
-}
-
-section {
-  padding: 60px 20px;
+body{
+  margin:0;
+  font-family:'Segoe UI', Arial, sans-serif;
+  color:#333;
+  line-height:1.6;
 }
 
 /* HERO */
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #6f42c1, #a084dc);
-  color: white;
+.hero{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  padding:70px 20px;
+  background:linear-gradient(135deg,#6f42c1,#9c7be6);
+  color:white;
 }
 
-.hero img {
-  max-width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+.hero-img{
+  flex:1;
+  min-width:280px;
+  text-align:center;
 }
 
-.hero-text {
-  max-width: 500px;
-  padding: 20px;
+.hero-img img{
+  width:90%;
+  max-width:420px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
-.btn {
-  display: inline-block;
-  background: #25D366;
-  color: white;
-  padding: 15px 25px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 10px;
+.hero-text{
+  flex:1;
+  min-width:280px;
+  max-width:500px;
+  padding:20px;
+}
+
+.hero-text h1{
+  font-size:44px;
+  margin:0;
+}
+
+.hero-text h2{
+  font-size:22px;
+  font-weight:400;
+  margin:10px 0 20px;
+}
+
+.hero-text p{
+  font-size:18px;
+}
+
+/* BOTONES */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  background:#25D366;
+  color:white;
+  padding:14px 28px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 /* SECCIONES */
-.container {
-  max-width: 900px;
-  margin: auto;
+.section{
+  padding:60px 20px;
 }
 
-.gray {
-  background: #f5f5f5;
+.container{
+  max-width:900px;
+  margin:auto;
+}
+
+.gray{
+  background:#f5f5f5;
+}
+
+h2{
+  font-size:28px;
+  margin-bottom:15px;
 }
 
 /* LISTAS */
-ul {
-  line-height: 1.8;
-  font-size: 18px;
+ul{
+  font-size:18px;
+  line-height:1.8;
 }
 
 /* MAPA */
-.map {
-  border-radius: 15px;
-  overflow: hidden;
-  margin-top: 20px;
+.map iframe{
+  width:100%;
+  height:320px;
+  border:0;
+  border-radius:15px;
 }
 
 /* REDES */
-.social a {
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #6f42c1;
+.social-buttons{
+  margin-top:20px;
 }
 
-/* BOTÓN FLOTANTE */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px 18px;
-  border-radius: 50%;
-  font-size: 20px;
-  text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.social-buttons a{
+  display:inline-block;
+  margin:10px;
+  padding:12px 18px;
+  border-radius:8px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* COLORES REDES */
+.instagram{background:#E1306C;}
+.facebook{background:#1877F2;}
+.tiktok{background:#000;}
+.youtube{background:#FF0000;}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  .hero-text h1{
+    font-size:32px;
+  }
 }
 </style>
 
@@ -107,7 +156,7 @@ ul {
 
 <section class="hero">
 
-  <div style="flex:1; min-width:280px; text-align:center;">
+  <div class="hero-img">
     <img src="portada fb2.png" alt="Dra Paocas">
   </div>
 
@@ -116,8 +165,8 @@ ul {
     <h2>Medicina y cirugía veterinaria</h2>
 
 ```
-<p style="font-size:18px;">
-  Atención profesional a domicilio en Soacha y sur de Bogotá, con enfoque en cirugía de tejidos blandos, seguridad anestésica y recuperación supervisada.
+<p>
+  Cirugía de tejidos blandos, manejo anestésico y atención veterinaria a domicilio en Soacha y sur de Bogotá.
 </p>
 
 <a href="https://wa.me/573195287810" target="_blank" class="btn">
@@ -131,37 +180,37 @@ ul {
 
 <!-- AUTORIDAD -->
 
-<section>
-  <div class="container" style="text-align:center;">
+<section class="section">
+  <div class="container">
     <h2>Enfoque clínico</h2>
-    <p style="font-size:18px;">
-      Médica veterinaria zootecnista con enfoque en cirugía de tejidos blandos y manejo integral del paciente.
-      Protocolos anestésicos controlados, monitoreo intraoperatorio y recuperación supervisada hasta estado consciente.
+    <p>
+      Médica veterinaria zootecnista con experiencia en cirugía de tejidos blandos, manejo anestésico controlado y recuperación supervisada.
+      Cada paciente es manejado bajo criterios de seguridad, estabilidad y entrega en estado consciente.
     </p>
   </div>
 </section>
 
 <!-- SERVICIOS -->
 
-<section class="gray">
+<section class="section gray">
   <div class="container">
     <h2>Servicios</h2>
     <ul>
       <li>Cirugía de tejidos blandos</li>
       <li>Consulta clínica a domicilio</li>
       <li>Manejo postoperatorio supervisado</li>
-      <li>Apoyo a colegas como cirujana externa</li>
+      <li>Cirujana externa para colegas</li>
     </ul>
   </div>
 </section>
 
 <!-- DIFERENCIALES -->
 
-<section>
+<section class="section">
   <div class="container">
     <h2>Diferenciales clínicos</h2>
     <ul>
-      <li>Protocolos anestésicos de corta duración</li>
+      <li>Protocolos anestésicos seguros y controlados</li>
       <li>Entrega del paciente despierto y estable</li>
       <li>Seguimiento postoperatorio personalizado</li>
       <li>Atención directa por la Dra Paocas</li>
@@ -171,16 +220,18 @@ ul {
 
 <!-- UBICACIÓN -->
 
-<section class="gray">
+<section class="section gray">
   <div class="container" style="text-align:center;">
-    <h2>Ubicación y opiniones</h2>
 
 ```
+<h2>Ubicación y opiniones</h2>
+
+<p style="font-size:18px;">
+  Atención veterinaria a domicilio en Soacha y sur de Bogotá
+</p>
+
 <div class="map">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31816.82707048574!2d-74.21364315!3d4.57544745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9fa62bc5a07f%3A0x85c24b55bb300733!2zRHJhIFBhb2NhcywgTWVkaWNpbmEgeSBDSXJ1Z8OtYSBWZXRlcmluYXJpYfCfkJUgeSDwn5Cx!5e0!3m2!1ses-419!2sco!4v1774936613106!5m2!1ses-419!2sco"
-    width="100%" height="300" style="border:0;">
-  </iframe>
+  <iframe src="https://www.google.com/maps?q=Dra+Paocas+Soacha&output=embed"></iframe>
 </div>
 
 <br>
@@ -195,32 +246,39 @@ ul {
 
 <!-- REDES -->
 
-<section>
+<section class="section">
   <div class="container" style="text-align:center;">
-    <h2>Redes sociales</h2>
 
 ```
-<div class="social">
-  <a href="https://www.instagram.com/drapaocas" target="_blank">Instagram</a>
-  <a href="https://www.facebook.com/drapaocas" target="_blank">Facebook</a>
-  <a href="https://www.tiktok.com/@drapaocas" target="_blank">TikTok</a>
-  <a href="https://www.youtube.com/@drapaocas" target="_blank">YouTube</a>
+<h2>Redes sociales</h2>
+
+<p style="font-size:18px;">
+  Contenido clínico, casos y educación veterinaria
+</p>
+
+<div class="social-buttons">
+  <a href="https://www.instagram.com/drapaocas" target="_blank" class="instagram">Instagram</a>
+  <a href="https://www.facebook.com/drapaocas" target="_blank" class="facebook">Facebook</a>
+  <a href="https://www.tiktok.com/@drapaocas" target="_blank" class="tiktok">TikTok</a>
+  <a href="https://www.youtube.com/@drapaocas" target="_blank" class="youtube">YouTube</a>
 </div>
 ```
 
   </div>
 </section>
 
-<!-- CONTACTO FINAL -->
+<!-- CONTACTO -->
 
-<section class="gray">
+<section class="section gray">
   <div class="container" style="text-align:center;">
-    <h2>Agenda tu consulta</h2>
-    <p style="font-size:18px;">
-      Atención en Soacha y sur de Bogotá
-    </p>
 
 ```
+<h2>Agenda tu consulta</h2>
+
+<p style="font-size:18px;">
+  Atención en Soacha y sur de Bogotá
+</p>
+
 <a href="https://wa.me/573195287810" target="_blank" class="btn">
   Escribir por WhatsApp
 </a>
@@ -231,8 +289,8 @@ ul {
 
 <!-- BOTÓN FLOTANTE -->
 
-<a href="https://wa.me/573195287810" target="_blank" class="whatsapp-float">
-  💬
+<a href="https://wa.me/573195287810" target="_blank" class="whatsapp">
+💬
 </a>
 
 </body>
