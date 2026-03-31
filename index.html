@@ -9,9 +9,8 @@
 <style>
 body{
   margin:0;
-  font-family:'Segoe UI', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   color:#333;
-  line-height:1.6;
 }
 
 /* HERO */
@@ -20,61 +19,39 @@ body{
   flex-wrap:wrap;
   align-items:center;
   justify-content:center;
-  padding:70px 20px;
-  background:linear-gradient(135deg,#6f42c1,#9c7be6);
+  padding:60px 20px;
+  background:#6f42c1;
   color:white;
 }
 
-.hero-img{
-  flex:1;
-  min-width:280px;
-  text-align:center;
-}
-
-.hero-img img{
-  width:90%;
-  max-width:420px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+.hero img{
+  width:100%;
+  max-width:400px;
+  border-radius:15px;
 }
 
 .hero-text{
-  flex:1;
-  min-width:280px;
   max-width:500px;
   padding:20px;
 }
 
-.hero-text h1{
-  font-size:44px;
-  margin:0;
-}
+.hero-text h1{font-size:36px;margin:0;}
+.hero-text h2{font-size:20px;font-weight:normal;}
 
-.hero-text h2{
-  font-size:22px;
-  font-weight:400;
-  margin:10px 0 20px;
-}
-
-.hero-text p{
-  font-size:18px;
-}
-
-/* BOTONES */
 .btn{
   display:inline-block;
-  margin-top:20px;
+  margin-top:15px;
   background:#25D366;
   color:white;
-  padding:14px 28px;
-  border-radius:10px;
+  padding:12px 20px;
+  border-radius:8px;
   text-decoration:none;
   font-weight:bold;
 }
 
 /* SECCIONES */
 .section{
-  padding:60px 20px;
+  padding:50px 20px;
 }
 
 .container{
@@ -82,51 +59,49 @@ body{
   margin:auto;
 }
 
-.gray{
-  background:#f5f5f5;
+.gray{background:#f5f5f5;}
+
+h2{font-size:26px;}
+
+/* SERVICIOS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
-h2{
-  font-size:28px;
-  margin-bottom:15px;
+.card{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
 }
 
-/* LISTAS */
-ul{
-  font-size:18px;
-  line-height:1.8;
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
 }
 
 /* MAPA */
-.map iframe{
+iframe{
   width:100%;
-  height:320px;
+  height:300px;
   border:0;
-  border-radius:15px;
+  border-radius:10px;
 }
 
 /* REDES */
-.social-buttons{
-  margin-top:20px;
-}
-
-.social-buttons a{
-  display:inline-block;
+.social a{
   margin:10px;
-  padding:12px 18px;
-  border-radius:8px;
-  color:white;
+  display:inline-block;
   text-decoration:none;
   font-weight:bold;
+  color:#6f42c1;
 }
 
-/* COLORES REDES */
-.instagram{background:#E1306C;}
-.facebook{background:#1877F2;}
-.tiktok{background:#000;}
-.youtube{background:#FF0000;}
-
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   bottom:20px;
@@ -135,16 +110,7 @@ ul{
   color:white;
   padding:15px;
   border-radius:50%;
-  font-size:20px;
   text-decoration:none;
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* RESPONSIVE */
-@media (max-width:768px){
-  .hero-text h1{
-    font-size:32px;
-  }
 }
 </style>
 
@@ -156,8 +122,8 @@ ul{
 
 <section class="hero">
 
-  <div class="hero-img">
-    <img src="portada fb2.png" alt="Dra Paocas">
+  <div>
+    <img src="portada fb2.png">
   </div>
 
   <div class="hero-text">
@@ -166,10 +132,10 @@ ul{
 
 ```
 <p>
-  Cirugía de tejidos blandos, manejo anestésico y atención veterinaria a domicilio en Soacha y sur de Bogotá.
+  Cirugía de tejidos blandos y atención a domicilio en Soacha y sur de Bogotá.
 </p>
 
-<a href="https://wa.me/573195287810" target="_blank" class="btn">
+<a href="https://wa.me/573195287810" class="btn">
   Agendar por WhatsApp
 </a>
 ```
@@ -178,67 +144,44 @@ ul{
 
 </section>
 
-<!-- AUTORIDAD -->
-
-<section class="section">
-  <div class="container">
-    <h2>Enfoque clínico</h2>
-    <p>
-      Médica veterinaria zootecnista con experiencia en cirugía de tejidos blandos, manejo anestésico controlado y recuperación supervisada.
-      Cada paciente es manejado bajo criterios de seguridad, estabilidad y entrega en estado consciente.
-    </p>
-  </div>
-</section>
-
 <!-- SERVICIOS -->
 
 <section class="section gray">
   <div class="container">
     <h2>Servicios</h2>
-    <ul>
-      <li>Cirugía de tejidos blandos</li>
-      <li>Consulta clínica a domicilio</li>
-      <li>Manejo postoperatorio supervisado</li>
-      <li>Cirujana externa para colegas</li>
-    </ul>
+
+```
+<div class="grid">
+
+  <div class="card">
+    <img src="cirugia.jpeg">
+    <p>Cirugía de tejidos blandos</p>
   </div>
-</section>
 
-<!-- DIFERENCIALES -->
+  <div class="card">
+    <img src="consulta.jpeg">
+    <p>Consulta a domicilio</p>
+  </div>
 
-<section class="section">
-  <div class="container">
-    <h2>Diferenciales clínicos</h2>
-    <ul>
-      <li>Protocolos anestésicos seguros y controlados</li>
-      <li>Entrega del paciente despierto y estable</li>
-      <li>Seguimiento postoperatorio personalizado</li>
-      <li>Atención directa por la Dra Paocas</li>
-    </ul>
+  <div class="card">
+    <img src="procedimiento.jpeg">
+    <p>Manejo postoperatorio</p>
+  </div>
+
+</div>
+```
+
   </div>
 </section>
 
 <!-- UBICACIÓN -->
 
-<section class="section gray">
-  <div class="container" style="text-align:center;">
+<section class="section">
+  <div class="container">
+    <h2>Ubicación</h2>
 
 ```
-<h2>Ubicación y opiniones</h2>
-
-<p style="font-size:18px;">
-  Atención veterinaria a domicilio en Soacha y sur de Bogotá
-</p>
-
-<div class="map">
-  <iframe src="https://www.google.com/maps?q=Dra+Paocas+Soacha&output=embed"></iframe>
-</div>
-
-<br>
-
-<a href="https://g.page/r/CX0wL7i7VMKFEBM/review" target="_blank" class="btn" style="background:#4285F4;">
-  Ver opiniones en Google
-</a>
+<iframe src="https://www.google.com/maps?q=Dra+Paocas+Soacha&output=embed"></iframe>
 ```
 
   </div>
@@ -246,21 +189,16 @@ ul{
 
 <!-- REDES -->
 
-<section class="section">
-  <div class="container" style="text-align:center;">
+<section class="section gray">
+  <div class="container">
+    <h2>Redes sociales</h2>
 
 ```
-<h2>Redes sociales</h2>
-
-<p style="font-size:18px;">
-  Contenido clínico, casos y educación veterinaria
-</p>
-
-<div class="social-buttons">
-  <a href="https://www.instagram.com/drapaocas" target="_blank" class="instagram">Instagram</a>
-  <a href="https://www.facebook.com/drapaocas" target="_blank" class="facebook">Facebook</a>
-  <a href="https://www.tiktok.com/@drapaocas" target="_blank" class="tiktok">TikTok</a>
-  <a href="https://www.youtube.com/@drapaocas" target="_blank" class="youtube">YouTube</a>
+<div class="social">
+  <a href="https://www.instagram.com/drapaocas">Instagram</a>
+  <a href="https://www.facebook.com/drapaocas">Facebook</a>
+  <a href="https://www.tiktok.com/@drapaocas">TikTok</a>
+  <a href="https://www.youtube.com/@drapaocas">YouTube</a>
 </div>
 ```
 
@@ -269,17 +207,12 @@ ul{
 
 <!-- CONTACTO -->
 
-<section class="section gray">
-  <div class="container" style="text-align:center;">
+<section class="section">
+  <div class="container">
+    <h2>Contacto</h2>
 
 ```
-<h2>Agenda tu consulta</h2>
-
-<p style="font-size:18px;">
-  Atención en Soacha y sur de Bogotá
-</p>
-
-<a href="https://wa.me/573195287810" target="_blank" class="btn">
+<a href="https://wa.me/573195287810" class="btn">
   Escribir por WhatsApp
 </a>
 ```
@@ -287,11 +220,7 @@ ul{
   </div>
 </section>
 
-<!-- BOTÓN FLOTANTE -->
-
-<a href="https://wa.me/573195287810" target="_blank" class="whatsapp">
-💬
-</a>
+<a href="https://wa.me/573195287810" class="whatsapp">💬</a>
 
 </body>
 </html>
