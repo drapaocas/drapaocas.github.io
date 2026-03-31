@@ -1,180 +1,221 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Dra Paocas - Medicina y Cirugía Veterinaria</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra Paocas | Medicina y Cirugía Veterinaria</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #333;
+}
 
-    /* HERO */
-    header {
-      position: relative;
-      background: url('portada fb2.png') no-repeat center right/cover;
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      padding: 40px;
-      color: white;
-    }
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  background: linear-gradient(135deg, #6a4bbf, #9b7bd6);
+  color: white;
+}
 
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0));
-    }
+.hero-text {
+  max-width: 500px;
+}
 
-    .hero-content {
-      position: relative;
-      max-width: 500px;
-      z-index: 2;
-    }
+.hero-text img {
+  width: 220px;
+  margin-bottom: 20px;
+}
 
-    .logo {
-      width: 220px;
-      margin-bottom: 20px;
-    }
+.hero-text h1 {
+  margin: 0;
+  font-size: 40px;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 40px;
-    }
+.hero-text h2 {
+  font-weight: 400;
+  margin: 10px 0;
+}
 
-    h2 {
-      margin: 10px 0;
-      font-weight: normal;
-      font-size: 20px;
-    }
+.hero-text p {
+  opacity: 0.9;
+}
 
-    .sub {
-      margin-top: 10px;
-      font-size: 16px;
-      opacity: 0.9;
-    }
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .btn {
-      margin-top: 20px;
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.hero img {
+  width: 420px;
+  border-radius: 20px;
+}
 
-    /* SECCIONES */
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-    }
+/* SECCIONES */
+section {
+  padding: 60px 10%;
+}
 
-    section img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
 
-    /* REDES */
-    .redes a {
-      display: inline-block;
-      margin-right: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #333;
-    }
+h2 {
+  margin-top: 0;
+  color: #2c2c2c;
+}
 
-  </style>
+/* SERVICIOS GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  text-align: center;
+}
+
+.service img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* CONTACTO */
+.contact p {
+  margin: 10px 0;
+}
+
+/* REDES */
+.redes a {
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #6a4bbf;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #777;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <div class="overlay"></div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
 
-  <div class="hero-content">
-    <img src="LOGO CLIENTES.png" class="logo">
+    <img src="LOGO CLIENTES.png">
 
     <h1>Dra Paocas</h1>
+
     <h2>Medicina y Cirugía Veterinaria</h2>
 
-    <div class="sub">
-      Atención a domicilio en Soacha y sur de Bogotá
-    </div>
+    <p>Atención a domicilio en Soacha y sur de Bogotá</p>
 
-    <a class="btn" href="https://wa.me/573195287810" target="_blank">
+    <a href="https://wa.me/573195287810" target="_blank" class="btn">
       Agendar por WhatsApp
     </a>
-  </div>
-</header>
 
+  </div>
+
+  <img src="portada fb2.png">
+
+</div>
+
+<!-- SOBRE -->
 <section>
-  <h2>Sobre mí</h2>
-  <p>
-    Médica veterinaria zootecnista con experiencia en cirugía de tejidos blandos y manejo clínico integral.
-    Atención orientada a la seguridad del paciente, protocolos anestésicos controlados y recuperación supervisada.
-  </p>
-  <img src="Profesional.jpeg">
+  <div class="card">
+    <h2>Atención veterinaria especializada</h2>
+    <p>
+      Manejo clínico orientado a la seguridad del paciente, protocolos anestésicos controlados
+      y recuperación supervisada hasta estado consciente.
+    </p>
+  </div>
 </section>
 
+<!-- SERVICIOS -->
 <section>
   <h2>Servicios</h2>
-  <ul>
-    <li>Cirugía de tejidos blandos</li>
-    <li>Consulta clínica a domicilio</li>
-    <li>Manejo postquirúrgico</li>
-    <li>Seguimiento clínico</li>
-  </ul>
-  <img src="consulta.jpeg">
-</section>
 
-<section>
-  <h2>Diferenciales clínicos</h2>
-  <ul>
-    <li>Protocolos anestésicos de corta duración</li>
-    <li>Entrega del paciente despierto y estable</li>
-    <li>Recuperación supervisada</li>
-    <li>Atención personalizada a domicilio</li>
-  </ul>
-</section>
+  <div class="grid">
 
-<section>
-  <h2>Procedimientos</h2>
-  <p>
-    Procedimientos realizados bajo protocolos controlados, monitoreo constante y criterios clínicos orientados a la seguridad del paciente.
-  </p>
-  <img src="cirugia.jpeg">
-</section>
+    <div class="card service">
+      <img src="cirugia.jpeg">
+      <p>Cirugía de tejidos blandos</p>
+    </div>
 
-<section>
-  <h2>Contacto</h2>
+    <div class="card service">
+      <img src="consulta.jpeg">
+      <p>Consulta clínica a domicilio</p>
+    </div>
 
-  <p><strong>Teléfono:</strong> +57 319 528 7810</p>
+    <div class="card service">
+      <img src="procedimiento.jpeg">
+      <p>Manejo postquirúrgico</p>
+    </div>
 
-  <div class="redes">
-    <a href="https://www.instagram.com/drapaocas" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-    <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
-    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
   </div>
-
-  <br>
-
-  <a class="btn" href="https://wa.me/573195287810" target="_blank">
-    Escribir por WhatsApp
-  </a>
 </section>
+
+<!-- DIFERENCIALES -->
+<section>
+  <div class="card">
+    <h2>Diferenciales clínicos</h2>
+    <ul>
+      <li>Protocolos anestésicos de corta duración</li>
+      <li>Entrega del paciente despierto y estable</li>
+      <li>Seguimiento postoperatorio</li>
+      <li>Enfoque en seguridad anestésica y recuperación controlada</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section>
+  <div class="card contact">
+    <h2>Contacto</h2>
+
+    <p>📞 319 528 7810</p>
+
+    <p class="redes">
+      <a href="https://instagram.com/drapaocas" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+      <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+      <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+    </p>
+
+    <a href="https://wa.me/573195287810" target="_blank" class="btn">
+      Escribir por WhatsApp
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  © Dra Paocas - Medicina y Cirugía Veterinaria
+</footer>
 
 </body>
 </html>
