@@ -1,268 +1,50 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dra Paocas | Medicina y Cirugía Veterinaria</title>
+<section style="
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  padding:60px 20px;
+  background: linear-gradient(135deg, #6f42c1, #a084dc);
+  color:white;
+">
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #ffffff;
-  color: #333;
-  line-height: 1.6;
-}
+  <!-- LADO IZQUIERDO (IMAGEN) -->
+  <div style="flex:1; min-width:280px; text-align:center;">
+    <img src="portada fb2.png" alt="Dra Paocas" style="
+      max-width:100%;
+      height:auto;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    ">
+  </div>
 
-/* HERO */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 10%;
-  background: linear-gradient(135deg, #6a4bbf, #9b7bd6);
-  color: white;
-}
+  <!-- LADO DERECHO (TEXTO) -->
+  <div style="flex:1; min-width:280px; padding:20px;">
+    
+    <h1 style="font-size:40px; margin-bottom:10px;">
+      Dra Paocas
+    </h1>
 
-.hero-text {
-  max-width: 500px;
-}
+    <h2 style="font-size:20px; font-weight:400; margin-bottom:20px;">
+      Medicina y cirugía veterinaria
+    </h2>
 
-.hero-text img {
-  width: 200px;
-  margin-bottom: 20px;
-}
-
-.hero-text h1 {
-  font-size: 48px;
-  margin: 0;
-}
-
-.hero-text h2 {
-  font-size: 22px;
-  font-weight: 400;
-  margin: 10px 0;
-}
-
-.hero-text p {
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 25px;
-  background: #25D366;
-  color: white;
-  padding: 14px 28px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.hero img {
-  width: 420px;
-  border-radius: 20px;
-}
-
-/* SECCIONES */
-section {
-  padding: 70px 10%;
-}
-
-h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  margin-bottom: 25px;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.service img {
-  width: 100%;
-  max-width: 280px;
-  border-radius: 12px;
-  margin-bottom: 10px;
-}
-
-/* MAPA */
-iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  border-radius: 15px;
-}
-
-/* REDES */
-.redes a {
-  margin-right: 15px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #6a4bbf;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero img {
-    margin-top: 30px;
-    width: 90%;
-  }
-
-  .hero-text h1 {
-    font-size: 34px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-text">
-
-    <img src="LOGO CLIENTES.png">
-
-    <h1>Dra Paocas</h1>
-
-    <h2>Medicina y Cirugía Veterinaria</h2>
-
-    <p>
-      Cirugía de tejidos blandos • Manejo anestésico • Atención domiciliaria
+    <p style="font-size:18px; margin-bottom:20px;">
+      Atención profesional a domicilio en Soacha y sur de Bogotá, con enfoque en cirugía de tejidos blandos, seguridad anestésica y recuperación supervisada.
     </p>
 
-    <p><strong>Atención en Soacha y sur de Bogotá</strong></p>
-
-    <a href="https://wa.me/573195287810" target="_blank" class="btn">
+    <a href="https://wa.me/573195287810" target="_blank" style="
+      display:inline-block;
+      background:#25D366;
+      color:white;
+      padding:15px 25px;
+      border-radius:10px;
+      font-size:18px;
+      text-decoration:none;
+      font-weight:bold;
+    ">
       Agendar por WhatsApp
     </a>
 
   </div>
-
-  <img src="portada fb2.png">
-</div>
-
-<!-- AUTORIDAD -->
-<section>
-  <div class="card">
-    <h2>Experiencia clínica</h2>
-    <p>
-      Médica veterinaria zootecnista con enfoque en cirugía de tejidos blandos,
-      protocolos anestésicos controlados y recuperación supervisada del paciente.
-    </p>
-  </div>
 </section>
-
-<!-- SERVICIOS -->
-<section>
-  <h2>Servicios</h2>
-
-  <div class="grid">
-
-    <div class="card service">
-      <img src="cirugia.jpeg">
-      <p><strong>Cirugía de tejidos blandos</strong></p>
-    </div>
-
-    <div class="card service">
-      <img src="consulta.jpeg">
-      <p><strong>Consulta clínica a domicilio</strong></p>
-    </div>
-
-    <div class="card service">
-      <img src="procedimiento.jpeg">
-      <p><strong>Manejo postquirúrgico</strong></p>
-    </div>
-
-  </div>
-</section>
-
-<!-- DIFERENCIALES -->
-<section>
-  <div class="card">
-    <h2>Diferenciales clínicos</h2>
-    <ul>
-      <li>Protocolos anestésicos seguros y controlados</li>
-      <li>Entrega del paciente despierto y estable</li>
-      <li>Recuperación supervisada</li>
-      <li>Seguimiento clínico personalizado</li>
-    </ul>
-  </div>
-</section>
-
-<!-- UBICACIÓN -->
-<section>
- <div style="
-  border-radius:15px;
-  overflow:hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-">
-
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31816.82707048574!2d-74.21364315!3d4.57544745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9fa62bc5a07f%3A0x85c24b55bb300733!2zRHJhIFBhb2NhcywgTWVkaWNpbmEgeSBDSXJ1Z8OtYSBWZXRlcmluYXJpYfCfkJUgeSDwn5Cx!5e0!3m2!1ses-419!2sco!4v1774936613106!5m2!1ses-419!2sco"
-    width="100%" 
-    height="300" 
-    style="border:0;"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-
-</div>
-</section>
-
-<!-- CONTACTO -->
-<section>
-  <div class="card">
-    <h2>Contacto</h2>
-
-    <p>📞 +57 319 528 7810</p>
-
-    <div class="redes">
-      <a href="https://instagram.com/drapaocas">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">TikTok</a>
-      <a href="#">YouTube</a>
-    </div>
-
-    <a href="https://wa.me/573195287810" class="btn">
-      Escribir por WhatsApp
-    </a>
-
-  </div>
-</section>
-
-<!-- BOTÓN FLOAT -->
-<a href="https://wa.me/573195287810" class="whatsapp">💬</a>
-
-</body>
-</html>
