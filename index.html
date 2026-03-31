@@ -9,7 +9,7 @@
 <style>
 body{
   margin:0;
-  font-family: Arial, sans-serif;
+  font-family:'Segoe UI', Arial, sans-serif;
   color:#333;
 }
 
@@ -20,30 +20,50 @@ body{
   align-items:center;
   justify-content:center;
   padding:60px 20px;
-  background:#6f42c1;
+  background:linear-gradient(135deg,#6f42c1,#9c7be6);
   color:white;
 }
 
-.hero img{
-  width:100%;
-  max-width:400px;
-  border-radius:15px;
+.hero-left{
+  flex:1;
+  min-width:280px;
+  text-align:center;
 }
 
-.hero-text{
+.hero-left img{
+  width:90%;
+  max-width:380px;
+  border-radius:20px;
+}
+
+.hero-right{
+  flex:1;
+  min-width:280px;
   max-width:500px;
   padding:20px;
 }
 
-.hero-text h1{font-size:36px;margin:0;}
-.hero-text h2{font-size:20px;font-weight:normal;}
+.logo{
+  width:140px;
+  margin-bottom:10px;
+}
+
+.hero-right h1{
+  font-size:36px;
+  margin:0;
+}
+
+.hero-right h2{
+  font-size:20px;
+  font-weight:400;
+}
 
 .btn{
   display:inline-block;
   margin-top:15px;
   background:#25D366;
   color:white;
-  padding:12px 20px;
+  padding:12px 22px;
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
@@ -55,31 +75,37 @@ body{
 }
 
 .container{
-  max-width:900px;
+  max-width:1000px;
   margin:auto;
 }
 
-.gray{background:#f5f5f5;}
+.gray{
+  background:#f5f5f5;
+}
 
-h2{font-size:26px;}
+h2{
+  font-size:26px;
+}
 
 /* SERVICIOS */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
+  margin-top:20px;
 }
 
 .card{
   background:white;
-  padding:15px;
-  border-radius:10px;
+  border-radius:12px;
+  padding:12px;
   text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 .card img{
   width:100%;
-  height:200px;
+  height:220px;
   object-fit:cover;
   border-radius:10px;
 }
@@ -89,7 +115,7 @@ iframe{
   width:100%;
   height:300px;
   border:0;
-  border-radius:10px;
+  border-radius:12px;
 }
 
 /* REDES */
@@ -111,6 +137,12 @@ iframe{
   padding:15px;
   border-radius:50%;
   text-decoration:none;
+  font-size:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero-right h1{font-size:28px;}
 }
 </style>
 
@@ -122,17 +154,20 @@ iframe{
 
 <section class="hero">
 
-  <div>
+  <div class="hero-left">
     <img src="portada fb2.png">
   </div>
 
-  <div class="hero-text">
-    <h1>Dra Paocas</h1>
-    <h2>Medicina y cirugía veterinaria</h2>
+  <div class="hero-right">
 
 ```
+<img src="LOGO CLIENTES.png" class="logo">
+
+<h1>Dra Paocas</h1>
+<h2>Medicina y cirugía veterinaria</h2>
+
 <p>
-  Cirugía de tejidos blandos y atención a domicilio en Soacha y sur de Bogotá.
+  Cirugía de tejidos blandos, manejo anestésico y atención a domicilio en Soacha y sur de Bogotá.
 </p>
 
 <a href="https://wa.me/573195287810" class="btn">
@@ -166,6 +201,16 @@ iframe{
   <div class="card">
     <img src="procedimiento.jpeg">
     <p>Manejo postoperatorio</p>
+  </div>
+
+  <div class="card">
+    <img src="Profesional.jpeg">
+    <p>Atención clínica personalizada</p>
+  </div>
+
+  <div class="card">
+    <img src="portada fb2.png">
+    <p>Enfoque integral del paciente</p>
   </div>
 
 </div>
