@@ -5,8 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dra Paocas | Medicina y Cirugía Veterinaria</title>
 
+<!-- CAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <style>
 
+/* GENERAL */
 body{
   margin:0;
   font-family:'Segoe UI', Arial, sans-serif;
@@ -53,13 +57,13 @@ body{
 /* TEXTOS */
 .hero-right h1{
   font-size:42px;
-  margin:0 0 10px 0;
+  margin-bottom:10px;
 }
 
 .hero-right h2{
   font-size:20px;
   font-weight:400;
-  margin:0 0 15px 0;
+  margin-bottom:15px;
 }
 
 .sub{
@@ -77,6 +81,8 @@ body{
   border-radius:10px;
   text-decoration:none;
   font-weight:bold;
+  border:none;
+  cursor:pointer;
 }
 
 /* SECCIONES */
@@ -94,7 +100,7 @@ body{
 }
 
 h2{
-  font-size:30px;
+  font-size:28px;
   margin-bottom:20px;
 }
 
@@ -135,17 +141,15 @@ iframe{
 /* REDES */
 .social{
   text-align:center;
-  margin-top:20px;
 }
 
 .social a{
+  margin:10px;
   display:inline-block;
-  margin:12px;
 }
 
 .social img{
-  width:45px;
-  filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.2));
+  width:40px;
   transition:0.3s;
 }
 
@@ -159,11 +163,15 @@ iframe{
 }
 
 .contacto p{
-  font-size:16px;
-  margin:10px 0;
+  margin:8px 0;
 }
 
-/* WHATSAPP */
+/* CAPTCHA */
+.captcha-box{
+  margin:20px 0;
+}
+
+/* WHATSAPP FLOAT */
 .whatsapp{
   position:fixed;
   bottom:20px;
@@ -203,9 +211,9 @@ iframe{
       <strong>Soacha y sur de Bogotá</strong>
     </p>
 
-    <a href="https://wa.me/573195287810" class="btn">
+    <button class="btn" onclick="validarCaptcha()">
       Agendar por WhatsApp
-    </a>
+    </button>
 
   </div>
 
@@ -234,8 +242,13 @@ iframe{
       </div>
 
       <div class="card">
-        <img src="Profesional.jpeg">
+        <img src="profesional.jpeg">
         <p>Atención clínica personalizada</p>
+      </div>
+
+      <div class="card">
+        <img src="portada.jpeg">
+        <p>Enfoque integral del paciente</p>
       </div>
 
     </div>
@@ -243,18 +256,18 @@ iframe{
   </div>
 </section>
 
-<!-- SOBRE MI -->
+<!-- SOBRE -->
 <section class="section">
   <div class="container">
+
     <h2>Sobre la Dra Paocas</h2>
 
     <p>
-      Médica veterinaria zootecnista desde 2012 con enfoque en cirugía de tejidos blandos y manejo clínico integral del paciente.
-      Experiencia en procedimientos seguros, protocolos anestésicos controlados y recuperación supervisada.
+      Médica veterinaria zootecnista con experiencia en cirugía de tejidos blandos, manejo anestésico y atención clínica integral.
     </p>
 
     <p>
-      Atención domiciliaria orientada a bienestar, estabilidad clínica y seguimiento responsable del paciente.
+      Enfoque en seguridad del paciente, recuperación controlada y acompañamiento postoperatorio.
     </p>
 
   </div>
@@ -263,6 +276,7 @@ iframe{
 <!-- MAPA -->
 <section class="section gray">
   <div class="container">
+
     <h2>Ubicación</h2>
 
     <iframe src="https://www.google.com/maps?q=Dra+Paocas+Soacha&output=embed"></iframe>
@@ -273,10 +287,10 @@ iframe{
 <!-- REDES -->
 <section class="section">
   <div class="container">
+
     <h2>Redes sociales</h2>
 
     <div class="social">
-
       <a href="https://www.instagram.com/drapaocas" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
       </a>
@@ -292,27 +306,45 @@ iframe{
       <a href="https://www.youtube.com/@drapaocas" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
       </a>
-
     </div>
 
   </div>
 </section>
 
-<!-- CONTACTO -->
+<!-- CONTACTO + CAPTCHA -->
 <section class="section gray">
   <div class="container contacto">
+
     <h2>Contacto</h2>
 
-    <p><strong>Teléfono:</strong> +57 319 528 7810</p>
-    <p><strong>Email:</strong> drapaocas@gmail.com</p>
+    <p><strong>📞</strong> +57 319 528 7810</p>
+    <p><strong>✉️</strong> drapaocas@gmail.com</p>
 
-    <a href="https://wa.me/573195287810" class="btn">
+    <div class="captcha-box">
+      <div class="g-recaptcha" data-sitekey="6LfhE64sAAAAAHq-OfP_AcecGZZdK5r6Ms5CaPnD"></div>
+    </div>
+
+    <button class="btn" onclick="validarCaptcha()">
       Escribir por WhatsApp
-    </a>
+    </button>
 
   </div>
 </section>
 
+<!-- SCRIPT CAPTCHA -->
+<script>
+function validarCaptcha(){
+  var response = grecaptcha.getResponse();
+
+  if(response.length === 0){
+    alert("Por favor verifica que eres humano");
+  }else{
+    window.open("https://wa.me/573195287810?text=Hola,%20quiero%20agendar%20una%20consulta");
+  }
+}
+</script>
+
+<!-- BOTON FLOTANTE -->
 <a href="https://wa.me/573195287810" class="whatsapp">💬</a>
 
 </body>
